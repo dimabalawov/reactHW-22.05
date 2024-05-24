@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ItStep</title>
+    <style>
+        .recipe-info{
+            padding: 12px;
+            border: 1px #ccc solid;
+            color:black;
+            width: 10em;
+            height: auto;
+        }
+        img
+        {
+            width: 9em;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"> </div>
+      
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     
+   <script type="text/babel">
+    const recipe = {
+        name:'Caesar Salad',
+        ingredients:'Chicken, Cheese,Mustars Sauce, Salad, Tomatoes,Eggs',
+        cooking:'Chop all ingredients and mix. Sprinkle cheese on top'
+    };
+    const recipeClassName = "recipe-info";
+    ReactDOM    
+        .createRoot(document.getElementById("app"))
+        .render(
+            <div className={recipeClassName}>
+                <p>Название блюда: {recipe.name}</p>
+                <p>Рецепт: {recipe.ingredients} </p>
+                <p>Готовка: {recipe.cooking}</p>
+                <img src="images/caesar.jpg" alt="Вторая картина" />
+            </div>
+        );
+   </script>
+</body>
+</html>
